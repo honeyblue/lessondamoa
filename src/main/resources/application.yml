@@ -1,0 +1,32 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    static-path-pattern: /resources/static/**
+  datasource:
+    url: jdbc:mariadb://madlamb.iptime.org:3306/lessondamoa
+    username: lessondamoa
+    password: P@ssw0rd
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.enable_lazy_load_no_trans: true
+      hibernate.format_sql: true
+  devtools.livereload.enabled: true
+server:
+  port: 8080
+  servlet:
+    context-path: /
+kakao:
+  rest-key: f15da0ec41a6f697832eb5aac1c8b34b
+  js-key: adc3f9ea244720acd4eb4044a167f4bc
+  native-key: 10d788eca59527111df4f5607d0507a9
+  admin-key: 1b7019a9a0cd705c2a90fb43268401a0
